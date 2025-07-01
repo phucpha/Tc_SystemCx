@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FileVersion>1.0.0.0</FileVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2179d2e3-e98e-4c4b-9487-e50307b8043f}</ProjectGuid>
+    <SubObjectsSortedByName>True</SubObjectsSortedByName>
+    <DownloadApplicationInfo>true</DownloadApplicationInfo>
+    <WriteProductVersion>true</WriteProductVersion>
+    <GenerateTpy>false</GenerateTpy>
+    <Name>Tc_SystemCx</Name>
+    <ProgramVersion>3.1.4024.0</ProgramVersion>
+    <Application>{c6910bf1-fe4f-4c48-92fa-626ea932b017}</Application>
+    <TypeSystem>{e70fbf26-d187-4b78-8d95-823225702de0}</TypeSystem>
+    <Implicit_Task_Info>{2f0110d4-0b7c-429e-879c-ae6f4f3fcaa8}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{3af78cdc-8dff-4b6a-a197-c41bbcd979ac}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{057838fb-2935-4f3f-91af-0118011de545}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{f4dffa8c-31c2-4e33-823f-9a89426251db}</LibraryReferences>
+    <Company>NewEngineer</Company>
+    <Released>false</Released>
+    <Title>Tc_SystemCx</Title>
+    <ProjectVersion>0.0.0.1</ProjectVersion>
+    <LibraryCategories>
+      <LibraryCategory xmlns="">
+        <Id>{74d110c6-7213-4765-be2b-3ff0f1e344fb}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>BuildingAutomation</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{f85b699a-03a4-49e3-9943-d193548feecb}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>Communication</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{348d807f-e1d6-47d4-ad2a-dc8d5fd59f05}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{f85b699a-03a4-49e3-9943-d193548feecb}</Id>
+        </ParentCategory>
+        <DefaultName>IEC60870</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{ae647248-ff09-4c38-932e-10ab7e9eb9ea}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{f85b699a-03a4-49e3-9943-d193548feecb}</Id>
+        </ParentCategory>
+        <DefaultName>IEC61850</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{54e90195-1c5a-4ae5-80f5-579d92dd9aa8}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{f85b699a-03a4-49e3-9943-d193548feecb}</Id>
+        </ParentCategory>
+        <DefaultName>Serial</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{23b71de8-3c4d-47a7-8969-e84f015c9e5d}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{f85b699a-03a4-49e3-9943-d193548feecb}</Id>
+        </ParentCategory>
+        <DefaultName>TcpIp</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{e800ea8a-cc01-4f20-bd63-4e34f39b75da}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{f85b699a-03a4-49e3-9943-d193548feecb}</Id>
+        </ParentCategory>
+        <DefaultName>Modbus</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{fafce590-c801-4d05-974c-d391e08bd390}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>Controller</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{313ea83d-0856-4423-8239-36856a823d0a}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>DataAccess</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{0c2d2cc2-1178-495d-a2c5-dd48e484d8c0}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>IO</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{425113a0-360b-49bc-b3be-a0c2f5666343}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{0c2d2cc2-1178-495d-a2c5-dd48e484d8c0}</Id>
+        </ParentCategory>
+        <DefaultName>Drive</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{fbd49470-7a3e-4d8c-bec7-8a262b18d231}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>Math</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{90603686-1a10-42a3-90e5-27c0c69154f7}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>Motion</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{ed65ed00-ff03-42ce-9a93-7e375f85ad34}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{90603686-1a10-42a3-90e5-27c0c69154f7}</Id>
+        </ParentCategory>
+        <DefaultName>PTP</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{e51270e5-11f0-4f5a-961b-9a4c48fe1dc0}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{90603686-1a10-42a3-90e5-27c0c69154f7}</Id>
+        </ParentCategory>
+        <DefaultName>Camming</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{592129c5-c82e-42b0-b712-006f68958ecb}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{90603686-1a10-42a3-90e5-27c0c69154f7}</Id>
+        </ParentCategory>
+        <DefaultName>FlyingSaw</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{2a41f279-94f2-4e37-a241-97286347c638}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{90603686-1a10-42a3-90e5-27c0c69154f7}</Id>
+        </ParentCategory>
+        <DefaultName>Drive</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{186d654a-b252-4ca2-9854-7e23939f7967}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{90603686-1a10-42a3-90e5-27c0c69154f7}</Id>
+        </ParentCategory>
+        <DefaultName>NCI</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{a1b11c77-e75e-471f-9e45-11fc4eef760b}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{90603686-1a10-42a3-90e5-27c0c69154f7}</Id>
+        </ParentCategory>
+        <DefaultName>CNC</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{35857722-d45d-45b1-a229-0a409661ea78}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{90603686-1a10-42a3-90e5-27c0c69154f7}</Id>
+        </ParentCategory>
+        <DefaultName>Hydraulics</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{dc2f4ff8-2ce2-4f1f-bce2-d5b9c174a46a}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{90603686-1a10-42a3-90e5-27c0c69154f7}</Id>
+        </ParentCategory>
+        <DefaultName>Packaging</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{d77c10e0-9dc6-46ed-bea1-c259418a1863}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>System</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{ba75baba-ddc3-4479-b5b3-3c8059bcba99}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{d77c10e0-9dc6-46ed-bea1-c259418a1863}</Id>
+        </ParentCategory>
+        <DefaultName>CX-Series</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{7c091802-871e-4487-8dcb-28c32dcb0a30}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{d77c10e0-9dc6-46ed-bea1-c259418a1863}</Id>
+        </ParentCategory>
+        <DefaultName>IPC-Series</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{cb610b82-b544-44a3-8551-c878e5389b18}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{d77c10e0-9dc6-46ed-bea1-c259418a1863}</Id>
+        </ParentCategory>
+        <DefaultName>Visu</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{22803ce1-8755-4889-b7b0-5920397c55f8}</Id>
+        <Version>1.0.0.0</Version>
+        <ParentCategory>
+          <Id>{d77c10e0-9dc6-46ed-bea1-c259418a1863}</Id>
+        </ParentCategory>
+        <DefaultName>Obsolete</DefaultName>
+      </LibraryCategory>
+      <LibraryCategory xmlns="">
+        <Id>{196fe72f-48df-4527-8662-d9036e12ac55}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>TwinSAFE</DefaultName>
+      </LibraryCategory>
+    </LibraryCategories>
+    <SelectedLibraryCategories>
+      <Id xmlns="">{ba75baba-ddc3-4479-b5b3-3c8059bcba99}</Id>
+    </SelectedLibraryCategories>
+    <DefaultNamespace>Tc_SystemCx</DefaultNamespace>
+    <Placeholder>Tc_SystemCx</Placeholder>
+    <Author>https://github.com/phucpha</Author>
+    <Description>This library expand of Tc2_systemCx</Description>
+    <DocFormat>reStructuredText</DocFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Cx70xx\FB_Cx7_Read_EEPROM_CFIRM_KEY.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Version\Global_Version.TcGVL">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DUTs" />
+    <Folder Include="GVLs" />
+    <Folder Include="POUs\Cx70xx" />
+    <Folder Include="Version" />
+    <Folder Include="VISUs" />
+    <Folder Include="POUs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderReference Include="Tc2_SystemCX">
+      <DefaultResolution>Tc2_SystemCX, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_SystemCX</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_Utilities">
+      <DefaultResolution>Tc2_Utilities, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Utilities</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_Module">
+      <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_Module</Namespace>
+    </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tc_SystemCx.tmc">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
+  <ProjectExtensions>
+    <PlcProjectOptions>
+      <XmlArchive>
+  <Data>
+    <o xml:space="preserve" t="OptionKey">
+      <v n="Name">"&lt;ProjectRoot&gt;"</v>
+      <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
+        <v>{192FAD59-8248-4824-A8DE-9177C94C195A}</v>
+        <o>
+          <v n="Name">"{192FAD59-8248-4824-A8DE-9177C94C195A}"</v>
+          <d n="SubKeys" t="Hashtable" />
+          <d n="Values" t="Hashtable" />
+        </o>
+        <v>{246001F4-279D-43AC-B241-948EB31120E1}</v>
+        <o>
+          <v n="Name">"{246001F4-279D-43AC-B241-948EB31120E1}"</v>
+          <d n="SubKeys" t="Hashtable" />
+          <d n="Values" t="Hashtable" />
+        </o>
+        <v>{8F99A816-E488-41E4-9FA3-846536012284}</v>
+        <o>
+          <v n="Name">"{8F99A816-E488-41E4-9FA3-846536012284}"</v>
+          <d n="SubKeys" t="Hashtable" />
+          <d n="Values" t="Hashtable" />
+        </o>
+        <v>{40450F57-0AA3-4216-96F3-5444ECB29763}</v>
+        <o>
+          <v n="Name">"{40450F57-0AA3-4216-96F3-5444ECB29763}"</v>
+          <d n="SubKeys" t="Hashtable" />
+          <d n="Values" t="Hashtable" ckt="String" cvt="String">
+            <v>ActiveVisuProfile</v>
+            <v>IR0whWr8bwfwBwAAiD2qpQAAAABVAgAA37x72QAAAAABAAAAAAAAAAEaUwB5AHMAdABlAG0ALgBTAHQAcgBpAG4AZwACTHsAZgA5ADUAYgBiADQAMgA2AC0ANQA1ADIANAAtADQAYgA0ADUALQA5ADQAMAAwAC0AZgBiADAAZgAyAGUANwA3AGUANQAxAGIAfQADCE4AYQBtAGUABDBUAHcAaQBuAEMAQQBUACAAMwAuADEAIABCAHUAaQBsAGQAIAA0ADAAMgA0AC4ANwAFFlAAcgBvAGYAaQBsAGUARABhAHQAYQAGTHsAMQA2AGUANQA1AGIANgAwAC0ANwAwADQAMwAtADQAYQA2ADMALQBiADYANQBiAC0ANgAxADQANwAxADMAOAA3ADgAZAA0ADIAfQAHEkwAaQBiAHIAYQByAGkAZQBzAAhMewAzAGIAZgBkADUANAA1ADkALQBiADAANwBmAC0ANABkADYAZQAtAGEAZQAxAGEALQBhADgAMwAzADUANgBhADUANQAxADQAMgB9AAlMewA5AGMAOQA1ADgAOQA2ADgALQAyAGMAOAA1AC0ANAAxAGIAYgAtADgAOAA3ADEALQA4ADkANQBmAGYAMQBmAGUAZABlADEAYQB9AAoOVgBlAHIAcwBpAG8AbgALBmkAbgB0AAwKVQBzAGEAZwBlAA0KVABpAHQAbABlAA4aVgBpAHMAdQBFAGwAZQBtAE0AZQB0AGUAcgAPDkMAbwBtAHAAYQBuAHkAEAxTAHkAcwB0AGUAbQARElYAaQBzAHUARQBsAGUAbQBzABIwVgBpAHMAdQBFAGwAZQBtAHMAUwBwAGUAYwBpAGEAbABDAG8AbgB0AHIAbwBsAHMAEyhWAGkAcwB1AEUAbABlAG0AcwBXAGkAbgBDAG8AbgB0AHIAbwBsAHMAFCRWAGkAcwB1AEUAbABlAG0AVABlAHgAdABFAGQAaQB0AG8AcgAVIlYAaQBzAHUATgBhAHQAaQB2AGUAQwBvAG4AdAByAG8AbAAWFHYAaQBzAHUAaQBuAHAAdQB0AHMAFwxzAHkAcwB0AGUAbQAYGFYAaQBzAHUARQBsAGUAbQBCAGEAcwBlABkmRABlAHYAUABsAGEAYwBlAGgAbwBsAGQAZQByAHMAVQBzAGUAZAAaCGIAbwBvAGwAGyJQAGwAdQBnAGkAbgBDAG8AbgBzAHQAcgBhAGkAbgB0AHMAHEx7ADQAMwBkADUAMgBiAGMAZQAtADkANAAyAGMALQA0ADQAZAA3AC0AOQBlADkANAAtADEAYgBmAGQAZgAzADEAMABlADYAMwBjAH0AHRxBAHQATABlAGEAcwB0AFYAZQByAHMAaQBvAG4AHhRQAGwAdQBnAGkAbgBHAHUAaQBkAB8WUwB5AHMAdABlAG0ALgBHAHUAaQBkACBIYQBmAGMAZAA1ADQANAA2AC0ANAA5ADEANAAtADQAZgBlADcALQBiAGIANwA4AC0AOQBiAGYAZgBlAGIANwAwAGYAZAAxADcAIRRVAHAAZABhAHQAZQBJAG4AZgBvACJMewBiADAAMwAzADYANgBhADgALQBiADUAYwAwAC0ANABiADkAYQAtAGEAMAAwAGUALQBlAGIAOAA2ADAAMQAxADEAMAA0AGMAMwB9ACMOVQBwAGQAYQB0AGUAcwAkTHsAMQA4ADYAOABmAGYAYwA5AC0AZQA0AGYAYwAtADQANQAzADIALQBhAGMAMAA2AC0AMQBlADMAOQBiAGIANQA1ADcAYgA2ADkAfQAlTHsAYQA1AGIAZAA0ADgAYwAzAC0AMABkADEANwAtADQAMQBiADUALQBiADEANgA0AC0ANQBmAGMANgBhAGQAMgBiADkANgBiADcAfQAmFk8AYgBqAGUAYwB0AHMAVAB5AHAAZQAnVFUAcABkAGEAdABlAEwAYQBuAGcAdQBhAGcAZQBNAG8AZABlAGwARgBvAHIAQwBvAG4AdgBlAHIAdABpAGIAbABlAEwAaQBiAHIAYQByAGkAZQBzACgQTABpAGIAVABpAHQAbABlACkUTABpAGIAQwBvAG0AcABhAG4AeQAqHlUAcABkAGEAdABlAFAAcgBvAHYAaQBkAGUAcgBzACs4UwB5AHMAdABlAG0ALgBDAG8AbABsAGUAYwB0AGkAbwBuAHMALgBIAGEAcwBoAHQAYQBiAGwAZQAsEnYAaQBzAHUAZQBsAGUAbQBzAC1INgBjAGIAMQBjAGQAZQAxAC0AZAA1AGQAYwAtADQAYQAzAGIALQA5ADAANQA0AC0AMgAxAGYAYQA3ADUANgBhADMAZgBhADQALihJAG4AdABlAHIAZgBhAGMAZQBWAGUAcgBzAGkAbwBuAEkAbgBmAG8AL0x7AGMANgAxADEAZQA0ADAAMAAtADcAZgBiADkALQA0AGMAMwA1AC0AYgA5AGEAYwAtADQAZQAzADEANABiADUAOQA5ADYANAAzAH0AMBhNAGEAagBvAHIAVgBlAHIAcwBpAG8AbgAxGE0AaQBuAG8AcgBWAGUAcgBzAGkAbwBuADIMTABlAGcAYQBjAHkAMzBMAGEAbgBnAHUAYQBnAGUATQBvAGQAZQBsAFYAZQByAHMAaQBvAG4ASQBuAGYAbwA0MEwAbwBhAGQATABpAGIAcgBhAHIAaQBlAHMASQBuAHQAbwBQAHIAbwBqAGUAYwB0ADUaQwBvAG0AcABhAHQAaQBiAGkAbABpAHQAeQDQAAIaA9ADAS0E0AUGGgfQBwgaAUUHCQjQAAkaBEUKCwQDAAAABQAAAA0AAAAAAAAA0AwLrQIAAADQDQEtDtAPAS0Q0AAJGgRFCgsEAwAAAAUAAAANAAAAKAAAANAMC60BAAAA0A0BLRHQDwEtENAACRoERQoLBAMAAAAFAAAADQAAAAAAAADQDAutAgAAANANAS0S0A8BLRDQAAkaBEUKCwQDAAAABQAAAA0AAAAUAAAA0AwLrQIAAADQDQEtE9APAS0Q0AAJGgRFCgsEAwAAAAUAAAANAAAAAAAAANAMC60CAAAA0A0BLRTQDwEtENAACRoERQoLBAMAAAAFAAAADQAAAAAAAADQDAutAgAAANANAS0V0A8BLRDQAAkaBEUKCwQDAAAABQAAAA0AAAAAAAAA0AwLrQIAAADQDQEtFtAPAS0X0AAJGgRFCgsEAwAAAAUAAAANAAAAKAAAANAMC60EAAAA0A0BLRjQDwEtENAZGq0BRRscAdAAHBoCRR0LBAMAAAAFAAAADQAAAAAAAADQHh8tINAhIhoCRSMkAtAAJRoFRQoLBAMAAAADAAAAAAAAAAoAAADQJgutAAAAANADAS0n0CgBLRHQKQEtENAAJRoFRQoLBAMAAAADAAAAAAAAAAoAAADQJgutAQAAANADAS0n0CgBLRHQKQEtEJoqKwFFAAEC0AABLSzQAAEtF9AAHy0t0C4vGgPQMAutAQAAANAxC60XAAAA0DIarQDQMy8aA9AwC60CAAAA0DELrQMAAADQMhqtANA0Gq0A0DUarQA=</v>
+          </d>
+        </o>
+      </d>
+      <d n="Values" t="Hashtable" />
+    </o>
+  </Data>
+  <TypeList>
+    <Type n="Hashtable">System.Collections.Hashtable</Type>
+    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+    <Type n="String">System.String</Type>
+  </TypeList>
+</XmlArchive>
+    </PlcProjectOptions>
+  </ProjectExtensions>
+</Project>

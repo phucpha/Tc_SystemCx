@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Cx7_Read_EEPROM_CFIRM_KEY" Id="{f25b089e-5bde-4131-9bc5-677c9d8c0a41}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'hide_all_locals'}
+FUNCTION_BLOCK FB_Cx7_Read_EEPROM_CFIRM_KEY
+VAR_INPUT
+	psKey: POINTER TO STRING(31);
+END_VAR
+
+VAR
+	arrEEPRomRead : ARRAY [0..nSizeOfHASH_SHA512-1] OF BYTE;
+	arrbHashGen : ARRAY [0..nSizeOfHASH_SHA512-1] OF BYTE;// Shouldn't edit it
+// EEPROM
+	bBusy            : BOOL;         // FB is working
+    bEEpromError     : BOOL;         // FB has an Error
+    nErrorID         : UDINT;        (* Error Code
+    If nErrorID=DEVICE_INVALIDACCESS the EEPROM write cycles reached max. value. 
+    If nErrorID=DEVICE_INVALIDPARM the given pointer parameter is invalid/null. 
+    If nErrorID=DEVICE_INVALIDSIZE the given buffer size is too small or too big.
+    If nErrorID=DEVICE_SRVNOTSUPP probably the image version need to be updated to support this feature. *)
+    nDataSizeEEPROM  : UINT;         // current size of (read) EEPROM data in bytes (max.120 Bytes)
+    nWritesCycles    : UINT;         // already performed EEPROM write cycles (maximum possible = 200)
+	eRead 			 : UINT;
+	fbRwEEPROM : FB_CX70xx_RW_EEPROM;
+	bTmpCorrectKey : BOOL;
+	idxLoop	: UINT;
+END_VAR
+VAR_OUTPUT
+	bCorrectKey : BOOL;	
+	bReadDone : BOOL;
+END_VAR
+VAR CONSTANT
+	nSizeOfHASH_SHA512 : UINT := 64;// Shouldn't edit it
+	nSizeOfKey : UINT := 32;// Shouldn't edit it
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbRwEEPROM(
+		eMode          := E_CX70xx_EEPROM_Mode.ReadOnly,    // select RW mode
+		pSrcBuf        := 0,        // pointer to WRITE EEPROM data buffer
+		cbSrcBufSize   := 0,         // size of WRITE EEPROM data buffer (max.120 Bytes)
+		pDstBuf        := ADR(arrEEPRomRead),        // pointer to READ EEPROM data buffer
+		cbDstBufSize   := nSizeOfHASH_SHA512,         // max.size of READ EEPROM data buffer (max.120 Bytes)
+		bBusy            => bBusy,         // FB is working
+		bError           => bEEpromError,         // FB has an Error
+		nErrorID         => nErrorID,        (* Error Code
+		If nErrorID=DEVICE_INVALIDACCESS the EEPROM write cycles reached max. value. 
+		If nErrorID=DEVICE_INVALIDPARM the given pointer parameter is invalid/null. 
+		If nErrorID=DEVICE_INVALIDSIZE the given buffer size is too small or too big.
+		If nErrorID=DEVICE_SRVNOTSUPP probably the image version need to be updated to support this feature. *)
+		nDataSizeEEPROM  => nDataSizeEEPROM,        // current size of (read) EEPROM data in bytes (max.120 Bytes)
+		nWritesCycles    => nWritesCycles         // already performed EEPROM write cycles (maximum possible = 200)
+	);
+CASE eRead OF
+	0://Read
+		fbRwEEPROM(bExecute := TRUE);
+		IF NOT fbRwEEPROM.bBusy THEN
+			eRead := 1;
+		END_IF 
+		bReadDone := FALSE;
+	1:
+		fbRwEEPROM(bExecute := FALSE);
+		F_GenerateHashValue(
+			hashMode := E_HashMode.HASH_SHA512,
+			pData := psKey,
+			nData := nSizeOfKey,
+			pHash := ADR(arrbHashGen),
+			nHash := nSizeOfHASH_SHA512
+	); 
+	bTmpCorrectKey := TRUE;
+	FOR idxLoop := 0 TO nSizeOfHASH_SHA512-1 DO 
+		IF arrbHashGen[idxLoop] <> arrEEPRomRead[idxLoop] THEN
+			bTmpCorrectKey := FALSE;
+		END_IF
+	END_FOR
+	bCorrectKey := bTmpCorrectKey;
+	
+END_CASE
+
+			]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Cx7_Read_EEPROM_CFIRM_KEY">
+      <LineId Id="160" Count="0" />
+      <LineId Id="162" Count="13" />
+      <LineId Id="159" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="51" Count="2" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="136" Count="4" />
+      <LineId Id="130" Count="0" />
+      <LineId Id="124" Count="0" />
+      <LineId Id="177" Count="1" />
+      <LineId Id="182" Count="0" />
+      <LineId Id="180" Count="0" />
+      <LineId Id="183" Count="0" />
+      <LineId Id="181" Count="0" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="16" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
